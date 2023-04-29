@@ -3,8 +3,8 @@ import java.util.ArrayList;
 
 /**
  * An Integer Binary Search Tree
- * @author: Your Name Here
- * @version: Date
+ * @author: Lucas Ying
+ * @version: 4/28/23
  */
 
 public class BST {
@@ -52,7 +52,8 @@ public class BST {
         BSTNode root = getRoot();
         return searchVal(val, root);
     }
-
+    //Recursive method that searches for a value in a tree,
+    //And returns a boolean value to determine whether it is or isn't in the tree.
     public boolean searchVal(int val, BSTNode root) {
         if(root == null){
             return false;
@@ -80,8 +81,8 @@ public class BST {
         return arr;
     }
     public void inorder(BSTNode root, ArrayList<BSTNode> arr) {
-        // If root is not null
-        // add the nodes in the order left, root, then right
+        //If root is not null,
+        //Add the nodes in the order left, root, then right.
         if(root == null){
             return;
         }
@@ -102,8 +103,8 @@ public class BST {
         return arr;
     }
     public void preorder(BSTNode root, ArrayList<BSTNode> arr) {
-        // If root is not null
-        // add the nodes in the order root, left, then right
+        //If root is not null,
+        //Add the nodes in the order root, left, then right.
         if(root == null){
             return;
         }
@@ -122,8 +123,8 @@ public class BST {
     }
 
     public void postorder(BSTNode root, ArrayList<BSTNode> arr){
-        // If root is not null
-        // add the nodes in the order left, then right, then root
+        //If root is not null,
+        //Add the nodes in the order left, then right, then root.
         if(root == null){
             return;
         }
@@ -144,12 +145,13 @@ public class BST {
         insertion(val, root);
     }
 
+    //Inserts value into tree as a node.
     public void insertion(int val, BSTNode root){
-        // If root is null then make the value the new root
+        //If root is null then make the value the new root.
         if(root == null){
             root = new BSTNode(val);
         }
-        // If root is in tree then return
+        //If root is in tree then return.
         if(root.getVal() == val) {
             return;
         }
